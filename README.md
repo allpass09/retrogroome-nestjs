@@ -1,73 +1,92 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
-</p>
+# Retro Groome E-commerce Backend
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+Welcome to the Retro Groome E-commerce Backend repository! This repository contains the backend codebase for Retro Groome, a clothing brand e-commerce site. We've built this project using the NestJS framework, providing a scalable and maintainable architecture to support our microservices.
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+## Table of Contents
 
-## Description
+1. [Introduction](#introduction)
+2. [Installation](#installation)
+3. [Usage](#usage)
+4. [Folder Structure](#folder-structure)
+5. [Contributing](#contributing)
+6. [License](#license)
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+## Introduction
+
+Retro Groome E-commerce Backend is designed to handle the backend functionalities of our e-commerce platform. It includes various microservices responsible for different aspects such as user management, product catalog, order processing, and more. Leveraging NestJS, we ensure robustness, scalability, and maintainability.
 
 ## Installation
 
-```bash
-$ npm install
+To get started with Retro Groome E-commerce Backend, follow these steps:
+
+1. **Clone the repository:**
+   ```
+   git clone https://github.com/retrogroome/backend.git
+   ```
+
+2. **Install dependencies:**
+   ```
+   cd backend
+   npm install
+   ```
+
+3. **Environment setup:**
+    - Create a `.env` file based on `.env.example` and fill in the necessary environment variables.
+
+4. **Database setup:**
+    - Set up your preferred database (e.g., PostgreSQL, MongoDB) and update the database configuration in `.env`.
+
+5. **Start the server:**
+   ```
+   npm run start:dev
+   ```
+
+## Usage
+
+Once the server is up and running, you can start utilizing the APIs provided by the various microservices. Here are some key endpoints:
+
+- **User Management:** `/api/users`
+- **Product Catalog:** `/api/products`
+- **Order Processing:** `/api/orders`
+
+Make sure to refer to the API documentation for detailed information on available endpoints and their functionalities.
+
+## Folder Structure
+
+The project follows a structured folder organization to maintain clarity and ease of navigation. Here's an overview:
+
+```
+src/
+|-- modules/
+|   |-- user/
+|   |-- product/
+|   |-- order/
+|   |-- ...
+|-- shared/
+|   |-- dto/
+|   |-- middleware/
+|   |-- ...
+|-- main.ts
+|-- ...
 ```
 
-## Running the app
+- **Modules:** Contains individual modules for different microservices.
+- **Shared:** Contains shared utilities, DTOs (Data Transfer Objects), and middleware.
 
-```bash
-# development
-$ npm run start
+## Contributing
 
-# watch mode
-$ npm run start:dev
+We welcome contributions to Retro Groome E-commerce Backend! If you'd like to contribute, please follow these steps:
 
-# production mode
-$ npm run start:prod
-```
-
-## Test
-
-```bash
-# unit tests
-$ npm run test
-
-# e2e tests
-$ npm run test:e2e
-
-# test coverage
-$ npm run test:cov
-```
-
-## Support
-
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
-
-## Stay in touch
-
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
+1. Fork the repository.
+2. Create your feature branch (`git checkout -b feature/your-feature`).
+3. Commit your changes (`git commit -am 'Add some feature'`).
+4. Push to the branch (`git push origin feature/your-feature`).
+5. Create a new Pull Request.
 
 ## License
 
-Nest is [MIT licensed](LICENSE).
+This project is licensed under the [MIT License](LICENSE). Feel free to use, modify, and distribute it as per the terms of the license.
+
+---
+
+Happy coding! If you have any questions or need assistance, feel free to reach out to us.
